@@ -78,6 +78,22 @@ describe('aws-node-sdk test suite as registered user', function testSuite() {
             });
     });
 
+    it('should result in a NoSuchUpload error',
+        // uploadpart test
+        done => {
+            const params = {
+                Bucket: bucket,
+                Key: objectKey,
+                PartNumber: 1,
+                UploadId: 'badId',
+                Body: firstBufferBody,
+            };
+            s3.uploadPart(params, (err, data) => {
+                assert.strictEqual(err.code, 'NoSuchUpload')
+                return done();
+            });
+        });
+
     it('should upload a part of a multipart upload to be aborted',
         // uploadpart test
         done => {
