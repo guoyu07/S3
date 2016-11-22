@@ -15,7 +15,7 @@
             "arn": "aws::iam:123456789013:bart",
             "keys": [{
                 "access": "USERBARTFUNACCESSKEY",
-                "secret": "verySecretKey1"
+                "secret": "verySecretKeyUser1"
             }]
         }]
     }, {
