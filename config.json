@@ -18,6 +18,7 @@
         "localregion": ["localhost"],
         "test-region": ["s3.scality.test"]
     },
+    "websiteEndpointPrefix": ["scality-website"],
     "sproxyd": {
         "bootstrap": ["localhost:8181"]
     },
